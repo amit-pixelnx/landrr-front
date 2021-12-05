@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Mukta:wght@400;800&display=swap');
+/*Common CSS*/
+
+:root {
+  --primary-color: #6db8ef;
+  --secondary-color: #1d2637;
+  --menu-text-color: #2b243b;
+  --heading-color: #222222;
+  --text-color: #7e8eb5;
+  --bg-color: #eef5fa;
+  --green-color: #9fe35a;
+  --red-color: #ff7283;
+  --green1-color: #00d179;
+  --red1-color: #ff3e5a;
+  --orange-color: #ff8737;
+  --light-blue-color: #49dee3;
+  --gray-color: #9d93b4;
+  --white-color: #ffffff;
+}
+
+/************************ Rest CSS Start *******************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/***************************** Reset CSS End *************************/
+body{
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+h1, .h1{
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--heading-color);
+  line-height: 30px;
+}
+.btn{
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 30px;
+  border-radius: 5px;
+  box-shadow: -7.949px 12.721px 10px rgba(109,184,239,0.3);
+  -webkit-box-shadow: -7.949px 12.721px 10px rgba(109,184,239,0.3);
+  background-color: var(--primary-color);
+  font-size: 16px;
+  color: var(--white-color);
+  font-weight: 500;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.btn_green{
+  background-color: #31dd8e;
+}
+.btn_green.shadow{
+  -webkit-box-shadow: 12.433px 11.594px 10px rgba(49,221,142,0.3);
+  box-shadow: 12.433px 11.594px 10px rgba(49,221,142,0.3);
+}
+.btn_green:hover{
+  background-color: var(--primary-color);
+  -webkit-box-shadow: -7.949px 12.721px 10px rgba(109,184,239,0.3);
+  box-shadow: -7.949px 12.721px 10px rgba(109,184,239,0.3);
+}
+.message {
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  -webkit-border-radius: 30px 0 30px 30px;
+  border-radius: 30px 0 30px 30px;
+  background-color: #ffffff;
+  padding: 22px 30px 22px 0;
+  display: none;
+}
+.message.show {
+  display: flex;
+  z-index: 9999;
+}
+.message::before {
+  display: block;
+  content: "";
+  width: 3px;
+  height: 41px;
+  margin-right: 27px;
+  -webkit-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.message.success::before {
+  background-color: var(--green1-color);
+}
+.message.error::before {
+  background-color: var(--red1-color);
+}
+.messageImage {
+  margin-right: 18px;
+}
+.message p {
+  font-size: 16px;
+  margin: 0;
+  color: var(--gray-color);
+}
+.message p b {
+  font-weight: 800;
+}
+.message.success p b{
+  color: var(--green1-color);
+}
+.message.error p b{
+  color: var(--red1-color);
+}
+/**/
+.menu{
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.menu li{
+  margin-left: 40px;
+}
+.menu li:first-child{
+  margin-left: 0;
+}
+.menu li a{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--menu-text-color);
+}
+.menuToogle{
+  display: none;
+}
+/* Dashboard Page */
+.main{
+  min-height: 100vh;
+  width: auto;
+  padding: 0 0 50px;
+  padding-left: 250px;
+  position: relative;
+}
+.wrapperMain{
+  padding: 0 50px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .menuToogle{
+    display: block;
+    position: absolute;
+    z-index: 99;
+    width: 24px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    z-index: 99999;
+  }
+  .menuToogle svg{
+    width: 100% !important;
+    height: 100% !important;
+    color: #2bb9f1 !important;
+  }
+  .menu{
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: 0;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+  }
+  .menu li{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .menu li a{
+    padding: 15px 0;
+    display: block;
+  }
+  .menu.showMenu{
+    top: 70px;
+    visibility: visible;
+    opacity: 1;
+    z-index: 99999;
+  }
+  .menuOverlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(255,255,255,0.9);
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+  }
+  .createAccount{
+    margin-right: 35px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px;
+    font-size: 14px;
+    position: relative;
+  }
+  .message{
+    right: 10px;
+    padding: 15px 15px 15px 0;
+  }
+  .message p {
+    font-size: 13px;
+  }
+  .messageImage {
+    margin-right: 10px;
+    max-width: 32px;
+  }
+  .message::before{
+    margin-right: 15px;
+    height: 25px;
+  }
+}

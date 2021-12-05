@@ -1,0 +1,26 @@
+/*Topbar CSS*/
+
+.topbar{
+    padding: 15px 0;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topRightSec{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.userSec{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.userImg{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}

@@ -1,0 +1,447 @@
+
+.authMain{
+  background: url('../public/images/bg_dot.jpg') center top no-repeat var(--bg-color);
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+.authMain::before{
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  background: url('../public/images/login_bottom_left_img.png') center top no-repeat;
+  width: 326px;
+  height: 226px;
+}
+.authMain::after{
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: url('../public/images/login_bottom_right_img.png') center top no-repeat;
+  width: 857px;
+  height: 528px;
+}
+.authHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px 30px 70px;
+  position: relative;
+  z-index: 9999;
+}
+.authHeader::before{
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url('../public/images/logo_bg.png') center top no-repeat;
+  background-size: cover;
+  width: 380px;
+  height: 199px;
+}
+.authLogo{
+  display: inline-block;
+}
+.authHeaderRight{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.authContent{
+  padding: 80px 158px 0 195px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.authLeftImg{
+  position: relative;
+  z-index: 9;
+}
+.authLogin{
+  position: relative;
+  z-index: 9;
+  width: 100%;
+  max-width: 540px;
+  border-radius: 20px;
+  background-color: #f1fbff;
+}
+.authLoginIn{
+  border-radius: 20px;
+  background-color: #f1fbff;
+  padding: 55px 60px 35px;
+  position: relative;
+}
+.authLoginIn::before{
+  display: block;
+  content: "";
+  background: url("../public/images/bubble_blue.png") left top no-repeat;
+  background-size: cover;
+  width: 87px;
+  height: 87px;
+  position: absolute;
+  left: -28px;
+  top: -28px;
+  z-index: -1;
+}
+.authLoginIn::after{
+  display: block;
+  content: "";
+  background: url("../public/images/bubble_yellow.png") left top no-repeat;
+  background-size: cover;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  right: -27px;
+  top: 50%;
+}
+.authLogin h1{
+  font-size: 34px;
+  line-height: 42px;
+  color: #2b2f40;
+  font-weight: 400;
+  font-family: "Mukta";
+  margin-bottom: 5px;
+}
+.authLogin h1 span{
+  color: #2bb9f1;
+  font-weight: 800;
+}
+.authLogin p{
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--gray-color);
+}
+.formFields {
+  margin-top: 30px;
+}
+.formFields li {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  position: relative;
+  height: 80px;
+  background-color: #ffffff;
+  border: 1px solid #deecf1;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+.formFields li input {
+  display: block;
+  background: none;
+  background-color: transparent !important;
+  padding: 3px 50px 15px 28px;
+  display: block;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.formFields li label {
+  display: block;
+  padding: 15px 50px 00px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #2b2f40;
+  position: relative;
+  top: 0;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.formFields li svg {
+  position: absolute;
+  right: 30px;
+  top: 35px;
+  fill: #c1d2d8;
+  pointer-events: none;
+}
+.formFields li input:focus+label+svg {
+  fill: #2bb9f1;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.formFields li input:focus+label {
+  color: #2bb9f1;
+  top: -10px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.formFields li input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: var(--gray-color);
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 400;
+}
+.formFields li input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: var(--gray-color);
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 400;
+}
+.formFields li input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: var(--gray-color);
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 400;
+}
+.formFields li input:-moz-placeholder {
+  /* Firefox 18- */
+  color: var(--gray-color);
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 400;
+}
+/*Password Field Placeholder*/
+.formFields li input[type="password"]::-webkit-input-placeholder {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  line-height: 24px;
+  position: relative;
+  top: 7px;
+}
+.formFields li input[type="password"]::-moz-placeholder {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  line-height: 24px;
+  position: relative;
+  top: 7px;
+}
+.formFields li input[type="password"]:-ms-input-placeholder {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  line-height: 24px;
+  position: relative;
+  top: 7px;
+}
+.formFields li input[type="password"]:-moz-placeholder {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  line-height: 24px;
+  position: relative;
+  top: 7px;
+}
+/**/
+.tbLoginOpt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 30px;
+}
+.tbLoginOpt,
+.tbLoginOpt label,
+.tbLoginOpt a {
+    color: var(--gray-color);
+    font-size: 15px;
+}
+.authLogin .btn {
+    display: block;
+    height: 56px;
+    width: 100%;
+    background-color: #2bb9f1;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+.authLogin .btn:hover{
+  background-color: var(--secondary-color);
+}
+.authLogin a:hover,
+.authLogin a:focus {
+    text-decoration: underline;
+}
+.signUpLink {
+    color: var(--gray-color);
+    margin: 35px 0 0;
+}
+.signUpLink a {
+    color: #2bb9f1;
+    font-weight: 800;
+    margin-left: 5px;
+    display: inline-block;
+}
+/* Custom Checkbox */
+.customCheck {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  line-height: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.customCheck input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.customCheck .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fbfaff;
+  border: 1px solid #eeebf6;
+}
+.customCheck:hover input~.checkmark {
+  background-color: var(--white-color);
+}
+.customCheck input:checked~.checkmark {
+  background-color: #2bb9f1;
+  border-color: #2bb9f1;
+}
+.customCheck .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.customCheck input:checked~.checkmark:after {
+  display: block;
+}
+.customCheck .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*Responsive CSS*/
+@media screen and (max-width: 1799.98px) {
+  .authContent{
+    padding: 80px 100px;
+  }
+}
+@media screen and (max-width: 1599.98px) {
+  .authContent{
+    padding: 60px 40px;
+  }
+}
+@media screen and (max-width: 1479.98px) {
+  .authLeftImg{
+    width: 100%;
+    max-width: 55%;
+  }
+  .authLogin{
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .authLoginIn{
+    padding: 40px 35px;
+  }
+  .authLogin{
+    max-width: 450px;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .authHeader{
+    padding: 20px 15px;
+  }
+  .authHeader::before{
+    width: 280px;
+    height: 147px;
+  }
+  .authLeftImg{
+    max-width: 50%;
+  }
+  .authLogin{
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 979.98px) {
+  .authContent{
+    justify-content: center;
+  }
+  .authLeftImg{
+    display: none;
+  }
+  .authLogin{
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .authLogo{
+    max-width: 128px;
+  }
+  .authHeader::before{
+    width: 200px;
+    height: 105px;
+  }
+  .authLogin h1 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .authLogin p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .formFields li label{
+    font-size: 14px;
+    padding: 15px 30px 0px 15px;
+  }
+  .formFields li{
+    height: 70px;
+  }
+  .formFields li svg{
+    top: 30px;
+    right: 10px;
+  }
+  .formFields li input {
+    padding: 3px 30px 15px 15px;
+  }
+  .authLogin .btn{
+    height: 46px;
+  }
+  .signUpLink{
+    margin: 25px 0 0;
+  }
+  .tbLoginOpt{
+    margin: 0 0 25px;
+  }
+  .authContent{
+    padding: 40px 30px;
+  }
+  .authLoginIn{
+    padding: 35px 25px;
+  }
+  .tbLoginOpt,
+  .tbLoginOpt label,
+  .tbLoginOpt a {
+    font-size: 14px;
+  }
+  .signUpLink a{
+    margin-left: 0;
+  }
+}
